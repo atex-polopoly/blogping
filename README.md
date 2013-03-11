@@ -36,7 +36,7 @@ The blogping and changes.xml format is documented at http://www.weblogs.com/api.
 3. Provided code base
 =================================
 
-To get up and running with the provided base code you'll need maven and a recent JDK. Try running "mvn jetty:run" and opening http://localhost:8080/hello in your browser. You should see a greeting message served by the HelloAtexServlet.java class.
+To get up and running with the provided base code you'll need maven and a recent JDK. Try running "mvn jetty:run" and opening http://localhost:8080/hello in your browser. You should see a greeting message served by the HelloAtexServlet.java class. There is some example code included in BlogpingServlet.java that you can use as a starting point.
 
 There are a couple of unit and integration tests included. To run the integration tests, run "mvn verify". The provided integration test "BlogpingIT" should pass if your implementation is correct. 
 
