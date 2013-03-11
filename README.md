@@ -64,8 +64,8 @@ Var god följ stegen nedan:
 Vi uppmana dig att skriva unit/integration tester.
 
 Följ namngivningskonvention:
-unit-test        -> src/test/java/**/*Test.java
-integration-test -> src/test/java/**/*IT.java
+* unit-test: src/test/java/**/*Test.java
+* integration-test: src/test/java/**/*IT.java
 
 Det finns några enkla test att utgå ifrån. Du kör integration-tester med "mvn verify", notera då att
 mvn drar igång jetty åt dig. Om din implementation är korrekt borde com.atex.blogping.BlogpingIT går igenom.
