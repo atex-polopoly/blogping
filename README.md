@@ -1,20 +1,9 @@
-================================================================================
+=================================
+1. Work assignment 
+=================================
 
-INNEHÅLL:
+The point of this assignment is to let you show us how you handle a java based programming task. When we review your code we'll take into account concepts like:
 
-    1. Arbetsprov - Beskrivning
-    2. Uppgift - Blog Ping
-    3. Installera Blog Ping projektet
-    4. Testning
- 
-
-================================================================================
-1 Arbetsprov - Beskrivning
-================================================================================
-
-Målet med provet är att visa hur du normalt tar dig an en javabaserad
-programmeringsuppgift. Kriterier vi kommer använda vid bedömning
-innehåller:
  - Clean design
  - Reuse (3:rd part products)
  - Maintainability
@@ -22,53 +11,33 @@ innehåller:
  - Java knowledge
  - Coding style
 
-Du avgör själv hur "djupt" du måste utföra arbetsprovet för att
-ovanstående skall framgå.
+It's up to you to decide how much time and effort you need to devote to the assignment to show us that you know how to work with the above concepts. 
 
-================================================================================
-2. Uppgift - Blog Ping
-================================================================================
+=================================
+2. Assignment description - Blog Ping
+=================================
 
-Skriv en klient samt server som implementerar REST varianten av det så
-kallade blogping protokollet i Java.
+Write a java client and server that implements the "blog ping" protocol.
 
-Vi vill således se:
- - En klient (kommandorad eller webapp) som anropar en blogping-server
-med korrekta argument (och som hanterar eventuella felfall) med hjälp av
-REST-apiet
- - En blogping-server som kan ta emot en REST blogping
- - En blogping-server som listar pingade bloggar i en changes.xml som är
-tillgänglig via HTTP
+Client:
+ - Command-Line or web interface
+ - Calls a blogping server using the REST-api
+ - Handles errors
 
-Blogping REST-api samt formatet för changes.xml finns dokumenterat på:
+Server:
+ - Accepts blogping messages using REST
+ - Serves a changes.xml over HTTP containing all pinged blogs.
+ - Handles concurrent connections
 
- http://www.weblogs.com/api.html (par: Setting up a REST Client)
+The blogping and changes.xml format is documented at http://www.weblogs.com/api.html. Note that only the REST interface is necessary to implement in this assignment.
 
 
-================================================================================
-3. Installera Blog Ping projektet
-================================================================================
+=================================
+3. Provided code base
+=================================
 
-Var god följ stegen nedan:
+To get up and running with the provided base code you'll need maven and a recent JDK. Try running "mvn jetty:run" and opening http://localhost:8080/hello in your browser. You should see a greeting message served by the HelloAtexServlet.java class.
 
-1. Ladda ner och installera Maven. Maven kan du ladda ner från http://maven.apache.org/download.cgi
-2. Kör kommandot: "mvn install" i roten av distributionsmappen.  
-3. Kör kommandot: "mvn jetty:run" "blogping". Detta kommer att starta en Jetty Server på port 8080.
-4. Gå mot adressen: http://localhost:8080/hello. Servern bör svara med en text som lyder: "Hello Atex!".
-5. Nu är din miljö och Blog Ping projekt korrekt installerat.
+There are a couple of unit and integration tests included. To run the integration tests, run "mvn verify". The provided integration test "BlogpingIT" should pass if your implementation is correct. 
 
-================================================================================
-4. Testning
-================================================================================
-
-Vi uppmana dig att skriva unit/integration tester.
-
-Följ namngivningskonvention:
-* unit-test: src/test/java/**/*Test.java
-* integration-test: src/test/java/**/*IT.java
-
-Det finns några enkla test att utgå ifrån. Du kör integration-tester med "mvn verify", notera då att
-mvn drar igång jetty åt dig. Om din implementation är korrekt borde com.atex.blogping.BlogpingIT går igenom.
-
- 
- 
+Note that we encourage you to write your own unit and integration tests to assert that your code works as intended (and to show us how you test your code).
