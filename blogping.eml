@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component jdk="JavaSE-1.6">
+	<exclude-output/>
+	<contentEntry url="file://$MODULE_DIR$"/>
+	<lib name="servlet-api-2.5.jar" scope="COMPILE">
+		<srcroot url="jar://$M2_REPO$/javax/servlet/servlet-api/2.5/servlet-api-2.5-sources.jar!/"/>
+	</lib>
+	<lib name="junit-4.8.jar" scope="COMPILE">
+		<srcroot url="jar://$M2_REPO$/junit/junit/4.8/junit-4.8-sources.jar!/"/>
+	</lib>
+	<lib name="commons-httpclient-3.1.jar" scope="COMPILE">
+		<srcroot url="jar://$M2_REPO$/commons-httpclient/commons-httpclient/3.1/commons-httpclient-3.1-sources.jar!/"/>
+	</lib>
+	<lib name="commons-logging-1.0.4.jar" scope="COMPILE">
+		<srcroot url="jar://$M2_REPO$/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4-sources.jar!/"/>
+	</lib>
+</component>
