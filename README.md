@@ -2,22 +2,24 @@
 1. Work assignment 
 =================================
 
-The point of this assignment is to let you show us how you handle a java based programming task. When we review your code we'll take into account concepts like:
+The goal of the test is to show how you would normally take on a java-based programming task.
+The assessment will be based on the following criterieas:
 
  - Clean design
  - Reuse (3:rd part products)
  - Maintainability
- - Testability
- - Java knowledge
+ - Testability/Testing
  - Coding style
+ - Requirement analysis
 
-It's up to you to decide how much time and effort you need to devote to the assignment to show us that you know how to work with the above concepts. 
+You decide how "deep" you go in your implementation to satisfy the criterias.
 
-=================================
+
+=====================================
 2. Assignment description - Blog Ping
-=================================
+=====================================
 
-Write a java client and server that implements the "blog ping" protocol.
+Write a Java client and server for the REST version of the "blog ping" protocol.
 
 Client:
  - Command-Line or web interface
@@ -26,18 +28,24 @@ Client:
 
 Server:
  - Accepts blogping messages using REST
- - Serves a changes.xml over HTTP containing all pinged blogs.
+ - Serves a changes.xml over HTTP
  - Handles concurrent connections
 
-The blogping and changes.xml format is documented at http://www.weblogs.com/api.html. Note that only the REST interface is necessary to implement in this assignment.
+The blogping and changes.xml format is documented here: http://www.weblogs.com/api.html (note that only the REST interface is necessary for this assignment).
 
 
 =================================
 3. Provided code base
 =================================
 
-To get up and running with the provided base code you'll need maven and a recent JDK. Try running "mvn jetty:run" and opening http://localhost:8080/hello in your browser. You should see a greeting message served by the HelloAtexServlet.java class. There is some example code included in BlogpingServlet.java that you can use as a starting point.
+You will need Maven and a recent JDK. You can verify that your development evnironment is sound by running:
 
-There are a couple of unit and integration tests included. To run the integration tests, run "mvn verify". The provided integration test "BlogpingIT" should pass if your implementation is correct. 
+    mvn jetty:run
 
-Note that we encourage you to write your own unit and integration tests to assert that your code works as intended (and to show us how you test your code).
+open then your browser of choice and point it to http://localhost:8080/hello. You should see a greeting message.
+
+The provided base code includes both integration and unit tests. You can run integration test form the command line, just type:
+
+    mvn verify
+    
+The servlet (BlogpingServlet) and the integration test (BlogpingIT) are just provided as an example, use them as a starting point or throw them away and start from scratch. Good luck. 
